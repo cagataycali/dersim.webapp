@@ -1,0 +1,2 @@
+webpackJsonp([2],{"/TYz":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n("Yv5S"),l=n("VU/8"),a=l(null,r.a,!1,null,null,null);t.default=a.exports},Yv5S:function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("h1",[e._v("Ana sayfa")]),n("nuxt-link",{attrs:{to:"/profil"}},[e._v("profil")])],1)},l=[],a={render:r,staticRenderFns:l};t.a=a}});
+//# sourceMappingURL=index.c4a879035ccacd31c61e.js.map

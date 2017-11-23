@@ -1,0 +1,2 @@
+webpackJsonp([1],{MFUr:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var a=n("xFbt"),r=n("VU/8"),s=r(null,a.a,!1,null,null,null);e.default=s.exports},xFbt:function(t,e,n){"use strict";var a=function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"profil"},[n("h2",[t._v("Profil sayfası")]),n("nuxt-link",{attrs:{to:"/"}},[t._v("anasayfa")])],1)},r=[],s={render:a,staticRenderFns:r};e.a=s}});
+//# sourceMappingURL=profil.6bf26aa18637004bddec.js.map
