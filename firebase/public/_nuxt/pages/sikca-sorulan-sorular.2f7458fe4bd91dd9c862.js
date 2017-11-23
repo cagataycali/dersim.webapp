@@ -1,2 +1,0 @@
-webpackJsonp([0],{DAEq:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var a=t("Tj/A"),r=t("VU/8"),l=r(null,a.a,!1,null,null,null);n.default=l.exports},"Tj/A":function(e,n,t){"use strict";var a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("div",[t("h1",[e._v("Sıkça Sorulan Sorular")]),t("nuxt-link",{attrs:{to:"/"}},[e._v("anasayfa")])],1)},r=[],l={render:a,staticRenderFns:r};n.a=l}});
-//# sourceMappingURL=sikca-sorulan-sorular.2f7458fe4bd91dd9c862.js.map

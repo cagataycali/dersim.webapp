@@ -2,14 +2,9 @@
   "database": {
     "rules": "database.rules.json"
   },
-  "hosting": {
-    "public": "public",
-    "rewrites": [
-      {
-         "source": "**/**",
-         "function": "render"
-       }
-    ]
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
   },
   "storage": {
     "rules": "storage.rules"
