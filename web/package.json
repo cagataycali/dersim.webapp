@@ -18,7 +18,7 @@
     "session-file-store": "^1.1.2"
   },
   "scripts": {
-    "dev": "NODE_ENV=production node server.js",
+    "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   }
