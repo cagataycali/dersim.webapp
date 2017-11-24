@@ -76,8 +76,42 @@ export default class Index extends Component {
     this.setState({ value: '' })
   }
 
-  handleLogin () {
-    firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider())
+  handleLogin (provider) {
+    let authProvider;
+    switch (provider) {
+      case 'google':
+        authProvider = new firebase.auth.GoogleAuthProvider()
+        break;
+      case 'twitter':
+        authProvider = new firebase.auth.TwitterAuthProvider()
+        break;
+      case 'facebook':
+        authProvider = new firebase.auth.FacebookAuthProvider()
+        break;
+      default:
+
+    }
+    firebase.auth().signInWithPopup(authProvider)
+      .then((result) => {
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        const token = result.credential.accessToken
+        // The signed-in user info.
+        const user = result.user
+        console.log(result)
+        const {displayName, email, photoURL} = user
+        // ...
+        console.log(displayName, email, photoURL, token)
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        // const errorCode = error.code
+        // const errorMessage = error.message
+        // The email of the user's account used.
+        // const email = error.email
+        // The firebase.auth.AuthCredential type that was used.
+        // const credential = error.credential
+        console.log(error)
+      })
   }
 
   handleLogout () {
@@ -91,7 +125,7 @@ export default class Index extends Component {
       {
         user
         ? <button onClick={this.handleLogout}>Logout</button>
-        : <button onClick={this.handleLogin}>Login</button>
+        : <div><button onClick={this.handleLogin.bind(this, 'google')}>Login via Google</button><button onClick={this.handleLogin.bind(this, 'facebook')}>Login via Facebook</button><button onClick={this.handleLogin.bind(this, 'twitter')}>Login via Twitter</button></div>
       }
       {
         user &&

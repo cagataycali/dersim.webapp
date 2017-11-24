@@ -6,7 +6,7 @@ import JssProvider from 'react-jss/lib/JssProvider'
 import getContext from '../styles/getContext'
 
 class MyDocument extends Document {
-  render() {
+  render () {
     return (
       <html lang='en' dir='ltr'>
         <Head>
