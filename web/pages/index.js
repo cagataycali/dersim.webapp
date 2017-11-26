@@ -63,6 +63,15 @@ const main = (props) => {
         <Grid container spacing={24}>
           <Grid item xs={8}>
             <Paper className={classes.paper}>Keşfet</Paper>
+            <Button raised color="primary" className={classes.button}>
+              Popüler
+            </Button>
+            <Button raised color="accent" className={classes.button}>
+              Notlar
+            </Button>
+            <Button raised color="contrast" className={classes.button}>
+              Sorular
+            </Button>
           </Grid>
           <Grid item xs={4}>
             <Paper className={classes.paper}>Son Sorular</Paper>
