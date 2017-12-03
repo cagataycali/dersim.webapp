@@ -1,0 +1,25 @@
+{
+  "name": "ders.im",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "firebase": "^4.6.2",
+    "firebase-admin": "^5.5.1",
+    "isomorphic-fetch": "^2.2.1",
+    "material-ui": "next",
+    "material-ui-icons": "^1.0.0-beta.17",
+    "next": "latest",
+    "next-routes": "^1.1.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "session-file-store": "^1.1.2"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  }
+}

@@ -1,0 +1,61 @@
+[debug] [2017-11-26T22:05:27.851Z] ----------------------------------------------------------------------
+[debug] [2017-11-26T22:05:27.853Z] Command:       /usr/local/Cellar/node/6.2.1/bin/node /Users/cagatay/.npm-packages/bin/firebase functions:log
+[debug] [2017-11-26T22:05:27.853Z] CLI Version:   3.15.2
+[debug] [2017-11-26T22:05:27.853Z] Platform:      darwin
+[debug] [2017-11-26T22:05:27.854Z] Node Version:  v8.4.0
+[debug] [2017-11-26T22:05:27.854Z] Time:          Mon Nov 27 2017 01:05:27 GMT+0300 (+03)
+[debug] [2017-11-26T22:05:27.854Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-26T22:05:27.871Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-26T22:05:27.871Z] > authorizing via signed-in user
+[debug] [2017-11-26T22:05:27.873Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/dersim-app  
+ Mon Nov 27 2017 01:05:27 GMT+0300 (+03)
+[debug] [2017-11-26T22:05:29.005Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-26T22:05:29.006Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/dersim-app/tokens  
+ Mon Nov 27 2017 01:05:29 GMT+0300 (+03)
+[debug] [2017-11-26T22:05:49.885Z] <<< HTTP RESPONSE 500
+[debug] [2017-11-26T22:05:49.885Z] <<< HTTP RESPONSE BODY
+[error] 
+[error] Error: HTTP Error: 500, An unknown error occurred. Please contact support.
+[debug] [2017-11-26T22:05:49.892Z] Error Context: {
+  "body": {
+    "error": {
+      "code": "UNKNOWN_ERROR",
+      "message": "An unknown error occurred. Please contact support."
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": {
+      "error": {
+        "code": "UNKNOWN_ERROR",
+        "message": "An unknown error occurred. Please contact support."
+      }
+    },
+    "headers": {
+      "server": "nginx",
+      "date": "Sun, 26 Nov 2017 22:05:49 GMT",
+      "content-type": "application/json; charset=utf-8",
+      "content-length": "97",
+      "connection": "close",
+      "x-content-type-options": "nosniff"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "admin.firebase.com",
+        "port": 443,
+        "hostname": "admin.firebase.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1/database/dersim-app/tokens",
+        "path": "/v1/database/dersim-app/tokens",
+        "href": "https://admin.firebase.com/v1/database/dersim-app/tokens"
+      },
+      "method": "GET"
+    }
+  }
+}

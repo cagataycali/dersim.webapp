@@ -6,6 +6,7 @@ import Grid from 'material-ui/Grid'
 import Typography from 'material-ui/Typography'
 import Button from 'material-ui/Button'
 import Send from 'material-ui-icons/Send'
+import Link from 'next/link'
 
 const styles = theme => ({
   root: {
@@ -57,6 +58,9 @@ const main = (props) => {
               App Store
               <Send className={props.classes.rightIcon} />
             </Button>
+            <Link href='/ders/fizik'>
+                Fizik dersine git
+            </Link>
           </Grid>
         </Grid>
         <br />
