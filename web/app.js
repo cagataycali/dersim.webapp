@@ -7,7 +7,6 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 const FileStore = require('session-file-store')(session)
 const index = require('./routes/index')
-const users = require('./routes/users')
 const admin = require('firebase-admin')
 const app = express()
 
@@ -21,7 +20,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -40,7 +39,6 @@ app.use(session({
 }))
 
 app.use('/', index)
-app.use('/users', users)
 
 app.post('/api/login', (req, res) => {
   if (!req.body) return res.sendStatus(400)

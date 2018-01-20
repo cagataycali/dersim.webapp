@@ -3,6 +3,7 @@ $(document).ready(() => {
   $('.tabs').tabs()
   $('.sidenav').sidenav({swipeable: true})
   $('.modal').modal();
+  // $('.materialboxed').materialbox();
 
   $('.fixed-action-btn').floatingActionButton({
    direction: 'top', // Direction menu comes out
@@ -35,9 +36,6 @@ $(document).ready(() => {
 
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
-      console.log(user);
-
-      // alert(user.displayName)
       return user.getIdToken()
         .then((token) => {
           // eslint-disable-next-line no-undef
@@ -75,9 +73,10 @@ $(document).ready(() => {
     }
     firebase.auth().signInWithPopup(authProvider)
       .then(result => {
-        const {name, photoURL} = result.user;
+        const {name, photoURL, displayName} = result.user;
 
-        $('.name').text('Çağatay Çalı')
+        $('.name').text(displayName)
+        M.toast({html: `Hoşgeldin ${displayName}`, classes: 'rounded'});
 
         const elem = document.querySelector('#login');
         const instance = new M.Modal.getInstance(elem);
@@ -107,6 +106,7 @@ $(document).ready(() => {
     instance.close()
     localStorage.setItem('token', null)
     firebase.auth().signOut()
+    M.toast({html: `Tekrar görüşmek üzere..`, classes: 'rounded'});
   }
 
   window.handleLogin = handleLogin;
