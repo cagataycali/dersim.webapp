@@ -47,8 +47,11 @@ html(lang='tr')
       title Ders.im
   body
     block content
-    script(type='text/javascript', src='https://www.gstatic.com/firebasejs/4.6.2/firebase.js')
+    script(type='text/javascript', src='/javascripts/slugify.js')
+    script(type='text/javascript', src='//www.gstatic.com/firebasejs/4.6.2/firebase.js')
+    script(type='text/javascript', src='//www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js')
     script(type='text/javascript', src='/javascripts/jquery-3.2.1.min.js')
     script(type='text/javascript', src='/javascripts/materialize.js')
-    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/zooming/1.2.6/zooming.min.js')
+    script(type='text/javascript', src='//cdnjs.cloudflare.com/ajax/libs/zooming/1.2.6/zooming.min.js')
     script(type='text/javascript', src='/javascripts/init.js')
+  include components/upload.pug
